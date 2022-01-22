@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lato-Regular.ttf">
+            <string>Lato-Regular</string>
+        </array>
+        <array key="Lato-Semibold.ttf">
+            <string>Lato-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EmptyView" customModule="MovieDB_VIP" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="Xgh-cm-llG" id="LNp-Hu-S8c"/>
+                <outlet property="msgLabel" destination="Yyk-7b-o0u" id="dr3-Da-Axb"/>
+                <outlet property="reloadButton" destination="HPM-Is-fdA" id="846-qp-S5J"/>
+                <outlet property="titleLabel" destination="diW-np-CsH" id="x5p-3w-uWY"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Xgh-cm-llG">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="548"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emptyView" translatesAutoresizingMaskIntoConstraints="NO" id="9Es-w1-xQi">
+                    <rect key="frame" x="30" y="30" width="315" height="218.5"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oops! Seems like there is nothing to be found. You do not have any game data" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yyk-7b-o0u" userLabel="msgLabel">
+                    <rect key="frame" x="16" y="300" width="343" height="34"/>
+                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
+                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HPM-Is-fdA">
+                    <rect key="frame" x="107.5" y="350" width="160" height="38"/>
+                    <color key="backgroundColor" systemColor="systemBlueColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="160" id="Yzz-f5-XWO"/>
+                        <constraint firstAttribute="height" constant="38" id="uEo-X8-k5b"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="16"/>
+                    <state key="normal" title="Refresh">
+                        <color key="titleColor" systemColor="tertiarySystemBackgroundColor"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="8"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="0.20000000000000001"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="didTapButton:" destination="-1" eventType="touchUpInside" id="A4i-1Y-oD3"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Empty" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="diW-np-CsH">
+                    <rect key="frame" x="140.5" y="264.5" width="94" height="19.5"/>
+                    <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="16"/>
+                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="Wsd-KP-Kh0"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="diW-np-CsH" firstAttribute="top" secondItem="9Es-w1-xQi" secondAttribute="bottom" constant="16" id="0K4-PC-Yxz"/>
+                <constraint firstItem="Wsd-KP-Kh0" firstAttribute="trailing" secondItem="Yyk-7b-o0u" secondAttribute="trailing" constant="16" id="4dn-ic-Uos"/>
+                <constraint firstItem="HPM-Is-fdA" firstAttribute="centerX" secondItem="Xgh-cm-llG" secondAttribute="centerX" id="4uc-Lr-574"/>
+                <constraint firstItem="diW-np-CsH" firstAttribute="centerX" secondItem="Xgh-cm-llG" secondAttribute="centerX" id="DOR-bZ-fNa"/>
+                <constraint firstItem="Yyk-7b-o0u" firstAttribute="top" secondItem="diW-np-CsH" secondAttribute="bottom" constant="16" id="XTR-Sl-upL"/>
+                <constraint firstItem="9Es-w1-xQi" firstAttribute="top" secondItem="Xgh-cm-llG" secondAttribute="top" constant="30" id="dVe-yb-eay"/>
+                <constraint firstItem="HPM-Is-fdA" firstAttribute="top" secondItem="Yyk-7b-o0u" secondAttribute="bottom" constant="16" id="dsK-B1-LPh"/>
+                <constraint firstItem="Yyk-7b-o0u" firstAttribute="leading" secondItem="Wsd-KP-Kh0" secondAttribute="leading" constant="16" id="giT-Tp-flJ"/>
+                <constraint firstItem="diW-np-CsH" firstAttribute="centerY" secondItem="Xgh-cm-llG" secondAttribute="centerY" id="kbo-fN-YOu"/>
+                <constraint firstItem="9Es-w1-xQi" firstAttribute="leading" secondItem="Wsd-KP-Kh0" secondAttribute="leading" constant="30" id="lsb-Nk-PxN"/>
+                <constraint firstItem="Wsd-KP-Kh0" firstAttribute="trailing" secondItem="9Es-w1-xQi" secondAttribute="trailing" constant="30" id="rEB-FV-GHe"/>
+                <constraint firstItem="9Es-w1-xQi" firstAttribute="centerX" secondItem="Xgh-cm-llG" secondAttribute="centerX" id="yp2-c5-owS"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="132.60869565217394" y="138.61607142857142"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="emptyView" width="660" height="388"/>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiarySystemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
